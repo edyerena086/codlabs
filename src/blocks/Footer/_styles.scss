@@ -1,0 +1,31 @@
+section {
+
+  &.footer-top {
+    background-color: $black-ter;
+  }
+
+  &.footer-bottom {
+    background-color: $black-bis;
+    padding-top: 1.5rem!important;
+    padding-bottom: 1.5rem!important;
+    color: $white-bis;
+    font-family: $family-secondary;
+
+    & .footer-bottom-links {
+      margin-bottom: 0;
+
+      & li {
+        margin-bottom: 0;
+        float: right;
+
+        & a {
+          color: $white-bis;
+
+          &:hover {
+            color: $pink;
+          }
+        }
+      }
+    }
+  }
+}

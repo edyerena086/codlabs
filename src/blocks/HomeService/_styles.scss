@@ -1,0 +1,45 @@
+.home-service {
+  & .card {
+    background-color: $white-ter;
+    box-shadow: none;
+    transition: 0.5s;
+
+    & .card-content {
+      & h3 {
+
+        & svg {
+          font-size: $font-large;
+          fill: $black;
+          margin-bottom: 1rem;
+          transition: 0.5s;
+        }
+
+        font-family: $family-tertiary;
+        font-weight: $weight-bold;
+        font-size: $font-medium;
+        color: $black;
+        margin-top: 1.5rem;
+        transition: 0.5s;
+      }
+    }
+
+    &:hover {
+      background-color: $pink;
+
+      & .card-content {
+        & h3 {
+
+          & svg {
+            fill: $white;
+          }
+
+          color: $white;
+        }
+
+        & p.body-small {
+          color: $white;
+        }
+      }
+    }
+  }
+}

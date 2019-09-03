@@ -1,3 +1,5 @@
+const globImporter = require('node-sass-glob-importer')
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -6,12 +8,19 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-resolve-src`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
+    },
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        importer: globImporter()
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

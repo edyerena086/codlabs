@@ -1,0 +1,50 @@
+// Global
+section {
+
+  padding-top: 5rem!important;
+  padding-bottom: 5rem!important;
+
+  &.bg-light {
+    background-color: $white-ter;
+  }
+}
+
+// Headlines
+h2 {
+  &.title {
+    font-family: $family-primary;
+    font-size: $font-large;
+    font-weight: $weight-extra-bold;
+    color: $black-ter;
+    padding-top: 1rem;
+    margin-bottom: 3.5rem!important;
+
+    & span {
+      display: block;
+      font-size: $font-regular;
+      color: $pink;
+      text-transform: uppercase;
+      font-family: $family-secondary;
+    }
+
+    &:before {
+      content: "\A";
+      width: 50px;
+      height: 3px;
+      background-color: $pink;
+      display: block;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+p {
+  font-size: $font-regular;
+  font-family: $family-tertiary;
+  line-height: 1.8rem;
+
+  &.body-small {
+    font-size: $font-small;
+    line-height: 1.4rem;
+  }
+}
