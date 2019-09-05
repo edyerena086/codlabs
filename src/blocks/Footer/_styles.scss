@@ -2,6 +2,51 @@ section {
 
   &.footer-top {
     background-color: $black-ter;
+
+    & .social-media {
+
+      margin-left: 0;
+
+      & li {
+
+        float: left;
+        &:not(:last-of-type) {
+          margin-right: 1rem;
+        }
+
+        & a {
+
+          font-size: $font-medium;
+          border: 2px solid $pink;
+          width: 3rem;
+          height: 3rem;
+          display: block;
+          position: relative;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          border-radius: 50%;
+          transition: 0.5s;
+
+          &:hover {
+            border-color: $white;
+            background-color: $white;
+
+            & svg {
+              fill: $pink;
+            }
+          }
+
+          & svg {
+            fill: $white;
+            display: block;
+            position: absolute;
+            top: calc(50% - 0.625rem);
+            left: calc(50% - 0.625rem);
+            transition: 0.5s;
+          }
+        }
+      }
+    }
   }
 
   &.footer-bottom {

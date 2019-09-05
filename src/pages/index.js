@@ -8,15 +8,19 @@ import HomeService from "blocks/HomeService"
 import HomeTestimonial from "blocks/HomeTestimonial"
 
 // Import Data
-import { sectionServices } from "data/HomePage"
+import { sectionAbout, sectionServices, sectionTestimonials } from "data/HomePage"
 
 const IndexPage = () => (
   <Layout>
-    <HomeAbout />
+    <HomeAbout
+      data={sectionAbout}
+    />
     <HomeService
       data={sectionServices}
     />
-    <HomeTestimonial />
+    <HomeTestimonial
+      data={sectionTestimonials}
+    />
   </Layout>
 )
 

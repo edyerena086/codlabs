@@ -5,15 +5,17 @@ import React from "react"
 import Bottom from "./Bottom"
 import Top from "./Top"
 
-// Import Libraries
-import { Section, Container, Column } from "rbx"
-
 export default class Footer extends React.Component  {
   render() {
+
+    const { bottom } = this.props
+
     return (
       <>
         <Top />
-        <Bottom />
+        <Bottom
+          data={bottom}
+        />
       </>
     )
   }

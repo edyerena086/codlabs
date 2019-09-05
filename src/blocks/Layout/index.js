@@ -2,7 +2,11 @@
 import React from "react"
 
 // Import Blocks
+import Header from "blocks/Header"
 import Footer from "blocks/Footer"
+
+// Import Data
+import { sectionTop, sectionBottom } from "data/Footer"
 
 export default class Layout extends React.Component {
   render() {
@@ -11,8 +15,12 @@ export default class Layout extends React.Component {
 
     return (
       <>
+        <Header />
         {children}
-        <Footer />
+        <Footer
+          top={sectionTop}
+          bottom={sectionBottom}
+        />
       </>
     )
   }

@@ -6,28 +6,26 @@ import SectionTitle from "elements/SectionTitle"
 
 // Import Libraries
 import { Section, Container, Column } from "rbx"
+import ReactHtmlParser from "react-html-parser"
 
 export default class HomeAbout extends React.Component {
   render() {
+
+    const { title, subtitle, text } = this.props.data
+
     return (
       <Section className="bg-light">
         <Container>
           <Column.Group>
             <Column size={5}>
               <SectionTitle
-                title="CodLabs"
-                subtitle="Agencia de Marketing Digital"
+                title={title}
+                subtitle={subtitle}
               />
             </Column>
             
             <Column size={7}>
-              <p>
-                ¡Bienvenid@ a nuestro sitio web!, somos una Agencia especializada en Marketing Digital con base en la ciudad de Monterrey, Nuevo León, México.
-              </p>
-
-              <p>
-                Nuestro objetivo es apoyar a nuestros clientes a incrementar sus leads, ventas y presencia en Internet a través de campañas de publicidad en medios digitales
-              </p>
+              {ReactHtmlParser(text)}
             </Column>
           </Column.Group>
         </Container>

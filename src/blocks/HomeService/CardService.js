@@ -9,23 +9,28 @@ import { Link } from "gatsby";
 export default class CardService extends React.Component {
 
   renderCardIcon = icon => {
+
+    let iconToRender;
+
     switch (icon) {
-      case "desktop":
-        return <FaDesktop />
-        break;
       case "seo":
-        return <FaSearchLocation />
+        iconToRender = <FaSearchLocation />
         break;
       case "shopping":
-        return <FaShoppingCart />
+        iconToRender = <FaShoppingCart />
         break;
       case "sm":
-        return <FaThumbsUp />
+        iconToRender = <FaThumbsUp />
         break;
       case "google":
-        return <FaGoogle />
+        iconToRender = <FaGoogle />
+        break;
+      default:
+        iconToRender = <FaDesktop />
         break;
     }
+
+    return iconToRender;
   }
 
   render() {
