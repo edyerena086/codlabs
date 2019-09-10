@@ -3,6 +3,7 @@ import React from "react"
 
 // Import Blocks
 import Layout from "blocks/Layout"
+import HomeSlider from "blocks/HomeSlider"
 import HomeAbout from "blocks/HomeAbout"
 import HomeService from "blocks/HomeService"
 import HomeTestimonial from "blocks/HomeTestimonial"
@@ -12,6 +13,7 @@ import { sectionAbout, sectionServices, sectionTestimonials } from "data/HomePag
 
 const IndexPage = () => (
   <Layout>
+    <HomeSlider />
     <HomeAbout
       data={sectionAbout}
     />

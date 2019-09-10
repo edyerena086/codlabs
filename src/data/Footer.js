@@ -1,8 +1,12 @@
 export const sectionTop = {
-  social_meda: [
+  social_media: [
     {
       channel: "facebook",
       link: "/facebook"
+    },
+    {
+      channel: "twitter",
+      link: "https://twitter.com/CodLabsMx"
     }
   ]
 }

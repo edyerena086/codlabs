@@ -6,6 +6,7 @@ import Header from "blocks/Header"
 import Footer from "blocks/Footer"
 
 // Import Data
+import { sectionNavbar } from "data/Header"
 import { sectionTop, sectionBottom } from "data/Footer"
 
 export default class Layout extends React.Component {
@@ -15,7 +16,9 @@ export default class Layout extends React.Component {
 
     return (
       <>
-        <Header />
+        <Header
+          navbar={sectionNavbar}
+        />
         {children}
         <Footer
           top={sectionTop}

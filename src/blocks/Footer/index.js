@@ -8,11 +8,13 @@ import Top from "./Top"
 export default class Footer extends React.Component  {
   render() {
 
-    const { bottom } = this.props
+    const { bottom, top } = this.props
 
     return (
       <>
-        <Top />
+        <Top
+          data={top}
+        />
         <Bottom
           data={bottom}
         />

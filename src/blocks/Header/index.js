@@ -6,7 +6,32 @@ import { Section, Container, Navbar } from "rbx"
 import { Link } from "gatsby"
 
 export default class Header extends React.Component {
+
+  renderNavabrItem = item => {
+    if (item.children) {
+      return (
+        <Navbar.Item dropdown>
+          <Navbar.Link>{item.title}</Navbar.Link>
+          <Navbar.Dropdown>
+            {item.children.map((element, index) => {
+              return (
+                <Link to={element.link} className="navbar-item" key={item.link.substring(1) + '-' + index}>{element.title}</Link>
+              )
+            })}
+          </Navbar.Dropdown>
+        </Navbar.Item>
+      )
+    } else {
+      return (
+        <Link to={item.link} className={item.inverted ? 'navbar-item is-inverted' : 'navbar-item'} key={item.link}>{item.title}</Link>
+      )
+    }
+  }
+
   render() {
+
+    const { navbar } = this.props
+
     return (
       <Section className="header">
         <Container>
@@ -17,17 +42,11 @@ export default class Header extends React.Component {
 
             <Navbar.Menu>
               <Navbar.Segment align="end">
-                <Link className="navbar-item">Inicio</Link>
-
-                <Navbar.Item dropdown>
-                  <Navbar.Link>Servicios</Navbar.Link>
-                  <Navbar.Dropdown>
-                    <Link className="navbar-item">About</Link>
-                    <Link className="navbar-item">Google Ads</Link>
-                  </Navbar.Dropdown>
-                </Navbar.Item>
-
-                <Link className="navbar-item is-inverted">Contáctanos</Link>
+                {navbar.map((item, index) => {
+                  return (
+                    this.renderNavabrItem(item)
+                  )
+                })}
               </Navbar.Segment>
             </Navbar.Menu>
           </Navbar>

@@ -15,10 +15,10 @@ export const sectionServices = {
       link: "/posicionaiento-en-buscadores"
     },
     {
-      icon: "desktop",
-      title: "Desarrollo de Sitios Web",
-      description: "...",
-      link: "/desarrollo-de-sitios-web"
+      icon: "sm",
+      title: "Redes Sociales",
+      description: "Mejora el posicionamiento de tu marca a través de campañas de marketing en redes sociales (Facebook, Twitter e Instagram) e incrementa tus leads.",
+      link: "/redes-sociales"
     },
     {
       icon: "google",
@@ -27,10 +27,10 @@ export const sectionServices = {
       link: "/google-adwords"
     },
     {
-      icon: "sm",
-      title: "Redes Sociales",
-      description: "Utiliza campañas digitales en Facebook y Facebook Ads para incrementar tus leads y ventas, llega a un amplio sector de tu mercado.",
-      link: "/redes-sociales"
+      icon: "desktop",
+      title: "Desarrollo de Sitios Web",
+      description: "...",
+      link: "/desarrollo-de-sitios-web"
     },
     {
       icon: "shopping",
